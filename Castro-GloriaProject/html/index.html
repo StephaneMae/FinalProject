@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Disk Scheduling Algorithm Calculator</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <h1>Disk Scheduling Algorithm Calculator</h1>
+
+        <div class="box">
+            <form>
+                <input 
+                oninput="generateInputFields()"
+                id="jobCountInput"
+                type="number"
+                id="floating_standard"
+                name="job_count"
+                placeholder="Input the Number of Jobs" />
+            </form>
+            </div>
+
+            <div class="joborder">
+                <div class="joblist">
+                    JOBS REQUEST
+                    <div id="additionalFields">
+                    </div>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <div class="reqlabel">
+                    Disk Algorithm Requirements
+                    <div class="required">
+                        <input class="disk" type="number" id="previousServe" placeholder="Previous Serve"> <br>
+                        <input class="disk" type="number" id="startingPosition" placeholder="Starting Position"> <br>
+                        <input class="disk" type="number" id="startingTrack" placeholder="Starting Track">  <br>
+                        <input class="disk" type="number" id="endingTrack" placeholder="Ending Track">  <br>
+                        <input class="disk"  type="number" id="time" placeholder="Time">
+
+                    </div>
+                </div>
+            </div>
+            <button id="popupBtn">Choose Algorithm</button>
+
+            <div id="background"></div>
+          
+            <div id="popup">
+                <div class="algo">
+                <button id="closeBtn">X</button>
+                <h3>Select an Algorithm</h3>
+                <div class="algorithms"style="display: inline-block;">
+                    <input type="radio" id="fifo" name="algorithm" value="FIFO">
+                    <label for="fifo">FIFO</label><br>
+                    <input type="radio" id="sstf" name="algorithm" value="SSTF">
+                    <label for="sstf">SSTF</label><br>
+                    <input type="radio" id="scan" name="algorithm" value="SCAN">
+                    <label for="scan">SCAN</label><br>
+                  </div>
+                  
+                  <div class="algorithms" style="display: inline-block;">
+                    <input type="radio" id="cscan" name="algorithm" value="C-SCAN">
+                    <label for="cscan">C-SCAN</label><br>
+                    <input type="radio" id="look" name="algorithm" value="LOOK">
+                    <label for="look">LOOK</label><br>
+                    <input type="radio" id="clook" name="algorithm" value="C-LOOK">
+                    <label for="clook">C-LOOK</label><br>
+                </div>
+                <button id="computeBtn">Compute and Show Graph</button>
+                </div>
+            </div>
+            </div>
+          
+            <script src="../script.js"></script>
+
+    </body>
+
+</html>
+
+
